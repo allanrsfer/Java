@@ -1,4 +1,4 @@
-package br.com.alura.java.io.teste;
+package br.com.bytebank.banco.modelo;
 
 /**
  * Classe que representa um cliente no Bytebank 
