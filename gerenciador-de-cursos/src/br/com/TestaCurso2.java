@@ -1,8 +1,10 @@
 package br.com;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class TestaCurso {
+public class TestaCurso2 {
 
     public static void main(String[] args) {
         Curso javaColecoes = new Curso("Dominando as coleções do Java", "Allan Rieri");
@@ -11,10 +13,13 @@ public class TestaCurso {
         javaColecoes.adiciona(new Aula("Criando uma aula",20));
         javaColecoes.adiciona(new Aula("Modelando com coleções",22));
 
-        List<Aula> aulas = javaColecoes.getAulas();
+        List<Aula> aulasImutaveis = javaColecoes.getAulas();
+        System.out.println(aulasImutaveis);
 
-        System.out.println(javaColecoes.getAulas());
+        List<Aula> aulas = new ArrayList<>(aulasImutaveis);
 
+        Collections.sort(aulas);
+        System.out.println(aulas);
 
     }
 }
